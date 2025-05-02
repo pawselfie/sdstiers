@@ -1,15 +1,27 @@
 [
-      {
+    {
+        "user": "placeholder",
+        "tiers": {
+          "pvanilla": "lt5",
+          "vanilla": "lt5",
+          "reforged": "lt5",
+          "boomerang": "lt5",
+          "spleef": "lt5",
+          "hyperspeed": "lt5",
+          "falldamage": "lt5"
+        }
+    },
+    {
         "user": "riot003",
         "tiers": {
           "boomerang": "ht1"
         }
-      },
-      {
+    },
+    {
         "user": "tabs8200",
         "tiers": {
           "boomerang": "ht1"
         }
-      }
+    }
   ]
   

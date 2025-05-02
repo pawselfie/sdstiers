@@ -208,9 +208,10 @@
     </div>
     <div id="main-container">
         <div id="mode-bar">
-          <button style="animation: border-flash 1s infinite steps(2);" onclick="renderMode('boomerang')">boomerang</button>
-          <button style="animation: border-flash 1s infinite steps(2);" onclick="renderMode('vanilla')">vanilla</button>
+          <button style="animation: border-flash 1s infinite steps(2);" onclick="renderMode('pvanilla')">pure vanilla</button>
+          <button style="animation: border-flash 1s infinite steps(2);" onclick="renderMode('vanilla')">balanced vanilla</button>
           <button style="animation: border-flash 1s infinite steps(2);" onclick="renderMode('reforged')">reforged</button>
+          <button style="animation: border-flash 1s infinite steps(2);" onclick="renderMode('boomerang')">boomerang</button>
           <button style="animation: border-flash 1s infinite steps(2);" onclick="renderMode('spleef')">spleef</button>
           <button style="animation: border-flash 1s infinite steps(2);" onclick="renderMode('hyperspeed')">hyperspeed</button>
           <button style="animation: border-flash 1s infinite steps(2);" onclick="renderMode('falldamage')">fall damage</button>
@@ -252,13 +253,16 @@
             col.querySelector('.high-tier').innerHTML = '';
             col.querySelector('.low-tier').innerHTML = '';
           });
-    
+
+          const separators = document.querySelectorAll('.separator');
+          separators.forEach((sep, index) => sep.style.marginTop = '5px');
+
           players.forEach(player => {
             const tier = player.tiers[mode];
             if (!tier) return;
     
-            const side = tier.slice(0, 2); // 'ht' or 'lt'
-            const index = parseInt(tier.slice(2)) - 1; // 0-4
+            const side = tier.slice(0, 2);
+            const index = parseInt(tier.slice(2)) - 1;
             if (index < 0 || index >= 5) return;
     
             const div = document.createElement('div');
@@ -270,6 +274,12 @@
               : columns[index].querySelector('.low-tier');
     
             target.appendChild(div);
+          });
+          
+          columns.forEach((col, i) => {
+            const high = col.querySelector('.high-tier');
+            const sep = col.querySelector('.separator');
+            high.parentNode.insertBefore(sep, high.nextSibling);
           });
         }
       </script>

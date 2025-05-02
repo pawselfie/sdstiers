@@ -103,7 +103,7 @@
             flex-direction: column;
             background: linear-gradient(#000000);
             background-size: 200% 200%;
-            animation: gradient 8s ease infinite;
+            animation: border-flash 1s infinite steps(2);;
             *{
                 user-select: none;
             }
@@ -305,11 +305,11 @@
     </div>
     <div id="main-container">
         <div id="mode-bar">
-          <button onclick="renderMode('boomerang')">Boomerang</button>
-          <button onclick="renderMode('vanilla')">Vanilla</button>
-          <button onclick="renderMode('reforged')">Reforged</button>
-          <button onclick="renderMode('spleef')">Spleef</button>
-          <button onclick="renderMode('hyperspeed')">Hyperspeed</button>
+          <button style="animation: border-flash 1s infinite steps(2);" onclick="renderMode('boomerang')">Boomerang</button>
+          <button style="animation: border-flash 1s infinite steps(2);" onclick="renderMode('vanilla')">Vanilla</button>
+          <button style="animation: border-flash 1s infinite steps(2);" onclick="renderMode('reforged')">Reforged</button>
+          <button style="animation: border-flash 1s infinite steps(2);" onclick="renderMode('spleef')">Spleef</button>
+          <button style="animation: border-flash 1s infinite steps(2);" onclick="renderMode('hyperspeed')">Hyperspeed</button>
         </div>
     
         <div id="content-section">

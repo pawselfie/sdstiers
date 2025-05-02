@@ -1,10 +1,13 @@
-{
-    "user": "charles test user",
-    "tiers": {
+[
+    {
+      "user": "charles test user",
+      "tiers": {
         "boomerang": "ht1",
         "vanilla": "lt2",
         "reforged": "ht3",
         "spleef": "lt4",
         "hyperspeed": "lt1"
+      }
     }
-}
+  ]
+  

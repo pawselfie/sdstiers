@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>sds tiers</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        @keyframes nop {
+            0%{
+                filter: opacity(1);
+            }
+            100%{
+                filter: opacity(0);
+            }
+        }
+        @keyframes border-flash{
+            from{
+                outline: 4px dashed rgb(255, 255, 255);
+                outline-offset: 4px;
+            }
+            to {
+                outline: 4px dashed rgb(0, 0, 0);
+                outline-offset: 4px;
+            }
+        }
+        
+        body {
+            font-family: "Comic Sans MS", "Comic Sans", sans-serif;
+            background: linear-gradient(-45deg, #ee52ee, #e73cdc, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 8s ease infinite;
+            margin:0;
+            padding: 10px;
+            font-size: 1.2em;
+        }
+
+        #title{
+            text-align: center;
+        }
+        #items-container{
+            display: flex;
+            justify-content: center;
+        }
+        #items-selected{
+            display:flex;
+            justify-content: center;
+            width: 100%;
+        }
+        #nope-img{
+            width: 100vw;
+            height: 100vh;
+            position:fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            filter: opacity(1);
+            display:none;
+        }
+        #points-left{
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 50;
+            background-color:rgb(123, 255, 152);
+            margin: 0;
+            padding: 5px;
+            border-right: 4px black solid;
+            border-bottom: 4px black solid;
+            user-select: none;
+        }
+        #selection-area-container{
+            display: flex;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            transform:translateX(-10px);
+            align-items: center;
+            z-index: 51;
+            flex-direction: column;
+            height: 0;
+            
+        }
+        #selection-area{
+            display:flex;
+            box-sizing:content-box;
+            border: 8px black solid;
+            border-top: none;
+            width: fit-content;
+            text-align: center;
+            min-width: 320px;
+            min-height: fit-content;
+            flex-direction: column;
+            background: linear-gradient(#000000);
+            background-size: 200% 200%;
+            animation: gradient 8s ease infinite;
+            *{
+                user-select: none;
+            }
+        }
+        #shameless-plug{
+            position: fixed;
+            bottom: 0;
+            right: 2px;
+            z-index: 50;
+            outline: 4px solid rgb(255, 123, 255);
+            margin: 0;
+            padding: 5px;
+            padding-right: 15px;
+            animation: border-flash 1s infinite steps(2);
+        }
+        #warning-text{
+            color: red;
+            width: 100%;
+            text-align: center;
+        }
+        .boom-animate{
+            animation: ease-out nop 3s;
+            display: block !important;
+        }
+        #options-container{
+            display: flex;
+            flex-direction: column;
+            border: 4px solid black;
+        }
+        .selection-container{
+            display: flex;
+            margin: 0;
+            border: 1px solid black;
+            overflow-x: hidden;
+            user-select: none;
+        }
+        .selection-card-container{
+            border: 1px solid black;
+            overflow-x: hidden;
+            display: flex;
+            min-width: fit-content;
+            margin-left: 0;
+            z-index: 0;
+        }
+        .descriptor{
+            display: flex;
+            min-width: fit-content;
+            padding: 5px;
+            background-color:rgb(225, 215, 250);
+            z-index: 5;
+        }
+        .descriptor-text{
+            text-align: center;
+            margin:auto;
+            /* color: red; */
+        }
+        .item-value-0{
+            border: rgb(172, 255, 190) 5px solid;
+        }
+        .item-value-4{
+            border: rgb(226, 172, 255) 5px solid;
+        }
+        .item-value-banned{
+            border: 5px solid black;
+            animation: rainbow-border 4s infinite;
+        }
+        .item-card{
+            position: relative;
+            box-sizing: content-box;
+            /* border-right: 0px!important;
+            border-bottom: 0px!important; */
+            width: 80px;
+            height: 80px;
+            margin: 10px;
+            padding: 0;
+            background: none;
+        }    
+        .item-image{
+            width: 100%;
+            height: 100%;
+            min-width: 80px;
+            min-height: 80px;
+            width: 80px;
+            height: 80px;
+        }
+        .item-value{
+            position: absolute;
+            margin: 0;
+            top: -15px;
+            right: 0px;
+            max-width: 80px;
+            max-height: 80px;
+            min-width: 80px;
+            min-height: 80px;
+            padding: 2px;
+            font-size: 60px;
+            font-family: "Comic Sans MS", "Comic Sans";
+            color:rgba(255, 255, 255, 0.5);
+        }
+        
+        body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #111;
+      color: #fff;
+    }
+
+    #main-container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    #mode-bar {
+      height: 40px;
+      background-color: #333;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      padding: 0 10px;
+      border-bottom: 2px solid #555;
+    }
+
+    #mode-bar button {
+      margin-right: 10px;
+      padding: 5px 10px;
+      background-color: #555;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    #mode-bar button:hover {
+      background-color: #777;
+    }
+
+    #content-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #text-header-bar {
+      height: 30px;
+      background-color: #222;
+      display: flex;
+      border-bottom: 1px solid #444;
+    }
+
+    .text-header {
+      flex: 1;
+      text-align: center;
+      padding: 5px 0;
+      border-right: 1px solid #444;
+    }
+
+    #text-columns {
+      flex: 1;
+      display: flex;
+    }
+
+    .text-column {
+      flex: 1;
+      padding: 10px;
+      overflow-y: scroll;
+      border-right: 1px solid #444;
+      background-color: #1a1a1a;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .high-tier, .low-tier {
+      flex: 1;
+    }
+
+    .separator {
+      height: 1px;
+      background-color: #888;
+      margin: 5px 0;
+    }
+
+    .player {
+      background: #333;
+      margin: 2px 0;
+      padding: 3px 5px;
+      border-radius: 4px;
+      font-size: 0.85em;
+    }
+    </style>
+</head>
+<body>
+    <div style="height: calc(3em + 20px)"></div>
+    <div id="mode-bar" style="text-align: center">Official Tiers:</div>
+    <div id="selection-area-container">
+        <div id="selection-area">
+            <h2 style="text-align: center; margin-top: 5px; margin-bottom: 5px; margin-left: 15px; margin-right: 15px;">   welcome to the sds tiers website   </h2>
+            <p id="points-used" style="margin: 5px auto;">check the <a href="https://discord.gg/vPz4S7uBrj">discord</a> for more info</p>
+        </div>
+    </div>
+    <div id="main-container">
+        <div id="mode-bar">
+          <button onclick="renderMode('boomerang')">Boomerang</button>
+          <button onclick="renderMode('vanilla')">Vanilla</button>
+          <button onclick="renderMode('reforged')">Reforged</button>
+          <button onclick="renderMode('spleef')">Spleef</button>
+          <button onclick="renderMode('hyperspeed')">Hyperspeed</button>
+        </div>
+    
+        <div id="content-section">
+          <div id="text-header-bar">
+            <div class="text-header">Tier 1</div>
+            <div class="text-header">Tier 2</div>
+            <div class="text-header">Tier 3</div>
+            <div class="text-header">Tier 4</div>
+            <div class="text-header">Tier 5</div>
+          </div>
+    
+          <div id="text-columns">
+            <div class="text-column"><div class="high-tier"></div><div class="separator"></div><div class="low-tier"></div></div>
+            <div class="text-column"><div class="high-tier"></div><div class="separator"></div><div class="low-tier"></div></div>
+            <div class="text-column"><div class="high-tier"></div><div class="separator"></div><div class="low-tier"></div></div>
+            <div class="text-column"><div class="high-tier"></div><div class="separator"></div><div class="low-tier"></div></div>
+            <div class="text-column"><div class="high-tier"></div><div class="separator"></div><div class="low-tier"></div></div>
+          </div>
+        </div>
+      </div>
+    
+
+      <script>
+        let players = [];
+    
+        fetch('player_db.json')
+          .then(response => response.json())
+          .then(data => {
+            players = data;
+          })
+          .catch(error => console.error('Error loading player_db.json:', error));
+    
+        function renderMode(mode) {
+          const columns = document.querySelectorAll('.text-column');
+          columns.forEach(col => {
+            col.querySelector('.high-tier').innerHTML = '';
+            col.querySelector('.low-tier').innerHTML = '';
+          });
+    
+          players.forEach(player => {
+            const tier = player.tiers[mode];
+            if (!tier) return;
+    
+            const side = tier.slice(0, 2); // 'ht' or 'lt'
+            const index = parseInt(tier.slice(2)) - 1; // 0-4
+            if (index < 0 || index >= 5) return;
+    
+            const div = document.createElement('div');
+            div.className = 'player';
+            div.textContent = player.user;
+    
+            const target = side === 'ht'
+              ? columns[index].querySelector('.high-tier')
+              : columns[index].querySelector('.low-tier');
+    
+            target.appendChild(div);
+          });
+        }
+      </script>
+    <p id="shameless-plug">website coded by beebp, modified by riot :p</p>
+</body>
+<!-- inspect deez nuts -->
+<!-- 😜😜😜 -->
+</html>

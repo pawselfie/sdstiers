@@ -8,6 +8,126 @@
         "spleef": "lt4",
         "hyperspeed": "lt1"
       }
-    }
+    },
+    {
+        "user": "charles test user2",
+        "tiers": {
+          "boomerang": "ht1",
+          "vanilla": "lt2",
+          "reforged": "ht3",
+          "spleef": "lt4",
+          "hyperspeed": "lt1"
+        }
+      },
+      {
+        "user": "charles test user3",
+        "tiers": {
+          "boomerang": "ht1",
+          "vanilla": "lt2",
+          "reforged": "ht3",
+          "spleef": "lt4",
+          "hyperspeed": "lt1"
+        }
+      },
+      {
+        "user": "charles test user4",
+        "tiers": {
+          "boomerang": "ht1",
+          "vanilla": "lt2",
+          "reforged": "ht3",
+          "spleef": "lt4",
+          "hyperspeed": "lt1"
+        }
+      },
+      {
+        "user": "charles test user5",
+        "tiers": {
+          "boomerang": "ht1",
+          "vanilla": "lt2",
+          "reforged": "ht3",
+          "spleef": "lt4",
+          "hyperspeed": "lt1"
+        }
+      },
+      {
+        "user": "charles test user6",
+        "tiers": {
+          "boomerang": "ht1",
+          "vanilla": "lt2",
+          "reforged": "ht3",
+          "spleef": "lt4",
+          "hyperspeed": "lt1"
+        }
+      },
+      {
+        "user": "charles test user7",
+        "tiers": {
+          "boomerang": "ht1",
+          "vanilla": "lt2",
+          "reforged": "ht3",
+          "spleef": "lt4",
+          "hyperspeed": "lt1"
+        }
+      },
+      {
+        "user": "6charles test user2",
+        "tiers": {
+          "boomerang": "ht1",
+          "vanilla": "lt2",
+          "reforged": "ht3",
+          "spleef": "lt4",
+          "hyperspeed": "lt1"
+        }
+      },
+      {
+        "user": "5charles test user3",
+        "tiers": {
+          "boomerang": "ht1",
+          "vanilla": "lt2",
+          "reforged": "ht3",
+          "spleef": "lt4",
+          "hyperspeed": "lt1"
+        }
+      },
+      {
+        "user": "4charles test user4",
+        "tiers": {
+          "boomerang": "ht1",
+          "vanilla": "lt2",
+          "reforged": "ht3",
+          "spleef": "lt4",
+          "hyperspeed": "lt1"
+        }
+      },
+      {
+        "user": "3charles test user5",
+        "tiers": {
+          "boomerang": "ht1",
+          "vanilla": "lt2",
+          "reforged": "ht3",
+          "spleef": "lt4",
+          "hyperspeed": "lt1"
+        }
+      },
+      {
+        "user": "2charles test user6",
+        "tiers": {
+          "boomerang": "ht1",
+          "vanilla": "lt2",
+          "reforged": "ht3",
+          "spleef": "lt4",
+          "hyperspeed": "lt1"
+        }
+      },
+      {
+        "user": "1charles test user7",
+        "tiers": {
+          "boomerang": "ht1",
+          "vanilla": "lt2",
+          "reforged": "ht3",
+          "spleef": "lt4",
+          "hyperspeed": "lt1"
+        }
+      }
   ]
   

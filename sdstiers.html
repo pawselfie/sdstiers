@@ -171,7 +171,6 @@
     }
 
     .high-tier, .low-tier {
-      flex: 1;
       display: flex;
       flex-direction: column;
     }
@@ -276,10 +275,15 @@
             target.appendChild(div);
           });
           
-          columns.forEach((col, i) => {
+          columns.forEach(col => {
             const high = col.querySelector('.high-tier');
             const sep = col.querySelector('.separator');
-            high.parentNode.insertBefore(sep, high.nextSibling);
+            const highChildren = high.querySelectorAll('.player');
+            if (highChildren.length > 0) {
+              high.insertBefore(sep, highChildren[highChildren.length - 1].nextSibling);
+            } else {
+              high.appendChild(sep);
+            }
           });
         }
       </script>

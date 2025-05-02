@@ -14,12 +14,16 @@
     {
         "user": "riot003",
         "tiers": {
+          "pvanilla": "lt1",
+          "vanilla": "lt1",
           "boomerang": "ht1"
         }
     },
     {
         "user": "tabs8200",
         "tiers": {
+          "pvanilla": "ht1",
+          "vanilla": "ht1",
           "boomerang": "ht1"
         }
     },

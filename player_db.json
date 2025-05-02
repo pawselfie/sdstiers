@@ -128,6 +128,76 @@
           "spleef": "lt4",
           "hyperspeed": "lt1"
         }
+      },
+      {
+        "user": "1charles test7 user7",
+        "tiers": {
+          "boomerang": "ht1",
+          "vanilla": "lt2",
+          "reforged": "ht3",
+          "spleef": "lt4",
+          "hyperspeed": "lt1"
+        }
+      },
+      {
+        "user": "1charles test6 user7",
+        "tiers": {
+          "boomerang": "ht1",
+          "vanilla": "lt2",
+          "reforged": "ht3",
+          "spleef": "lt4",
+          "hyperspeed": "lt1"
+        }
+      },
+      {
+        "user": "1charles test5 user7",
+        "tiers": {
+          "boomerang": "ht1",
+          "vanilla": "lt2",
+          "reforged": "ht3",
+          "spleef": "lt4",
+          "hyperspeed": "lt1"
+        }
+      },
+      {
+        "user": "1charles test4 user7",
+        "tiers": {
+          "boomerang": "ht1",
+          "vanilla": "lt2",
+          "reforged": "ht3",
+          "spleef": "lt4",
+          "hyperspeed": "lt1"
+        }
+      },
+      {
+        "user": "1charles test1 user7",
+        "tiers": {
+          "boomerang": "ht1",
+          "vanilla": "lt2",
+          "reforged": "ht3",
+          "spleef": "lt4",
+          "hyperspeed": "lt1"
+        }
+      },
+      {
+        "user": "1charles test3 user7",
+        "tiers": {
+          "boomerang": "ht1",
+          "vanilla": "lt2",
+          "reforged": "ht3",
+          "spleef": "lt4",
+          "hyperspeed": "lt1"
+        }
+      },
+      {
+        "user": "1charles test2 user7",
+        "tiers": {
+          "boomerang": "ht1",
+          "vanilla": "lt2",
+          "reforged": "ht3",
+          "spleef": "lt4",
+          "hyperspeed": "lt1"
+        }
       }
   ]
   

@@ -1,293 +1,295 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>sds tiers</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <style>
-        @keyframes gradient {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-        @keyframes nop {
-            0%{
-                filter: opacity(1);
-            }
-            100%{
-                filter: opacity(0);
-            }
-        }
-        @keyframes border-flash{
-            from{
-                outline: 4px dashed rgb(255, 255, 255);
-                outline-offset: 4px;
-            }
-            to {
-                outline: 4px dashed rgb(0, 0, 0);
-                outline-offset: 4px;
-            }
-        }
-        
-        body {
-            font-family: "Comic Sans MS", "Comic Sans", sans-serif;
-            background: linear-gradient(-45deg, #ee52ee, #e73cdc, #23a6d5, #23d5ab);
-            background-size: 400% 400%;
-            animation: gradient 8s ease infinite;
-            margin:0;
-            padding: 10px;
-            font-size: 1.2em;
-        }
-
-        #title{
-            text-align: center;
-        }
-        
-        #selection-area-container{
-            display: flex;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            transform:translateX(-10px);
-            align-items: center;
-            z-index: 51;
-            flex-direction: column;
-            height: 0;
-            
-        }
-
-        #selection-area{
-            display:flex;
-            box-sizing:content-box;
-            border: 8px black solid;
-            border-top: none;
-            width: fit-content;
-            text-align: center;
-            min-width: 320px;
-            min-height: fit-content;
-            flex-direction: column;
-            background: linear-gradient(#000000);
-            background-size: 200% 200%;
-            animation: border-flash 1s infinite steps(2);;
-            *{
-                user-select: none;
-            }
-        }
-
-      #shameless-plug {
-          position: fixed;
-          bottom: 0;
-          right: 2px;
-          z-index: 50;
-          outline: 4px solid rgb(255, 123, 255);
-          margin: 0;
-          padding: 5px;
-          padding-right: 15px;
-          animation: border-flash 1s infinite steps(2);
+  <meta charset="UTF-8">
+  <title>sds tiers</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    @keyframes nop {
+      0%{
+        filter: opacity(1);
+      }
+      100%{
+        filter: opacity(0);
+      }
+    }
+    @keyframes border-flash{
+      from{
+        outline: 4px dashed rgb(255, 255, 255);
+        outline-offset: 4px;
+      }
+      to {
+        outline: 4px dashed rgb(0, 0, 0);
+        outline-offset: 4px;
+      }
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-        
     body {
-      margin: 0;
-      font-family: sans-serif;
-      background: #111;
-      color: #fff;
-    }
-
-    #main-container {
-      display: flex;
-      flex-direction: column;
-      height: 100vh;
-    }
-
-    #mode-bar {
-      min-height: 50px;
-      background-color: #333;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 15px;
-      padding: 5px 15px;
-      border-bottom: 2px solid #555;
-    }
-
-    #mode-bar button {
-      padding: 8px 14px;
-      background-color: #555;
-      border: none;
-      color: #fff;
-      cursor: pointer;
-      flex-shrink: 0;
-    }
-
-    #mode-bar button:hover {
-      background-color: #777;
-    }
-
-    #content-section {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-
-    #text-header-bar {
-      height: 30px;
-      background-color: #222;
-      display: flex;
-      border-bottom: 1px solid #444;
-    }
-
-    .text-header {
-      flex: 1;
-      text-align: center;
-      padding: 5px 0;
-      border-right: 1px solid #444;
-    }
-
-    #text-columns {
-      flex: 1;
-      display: flex;
-    }
-
-    .text-column {
-      flex: 1;
+      font-family: "Comic Sans MS", "Comic Sans", sans-serif;
+      background: linear-gradient(-45deg, #ee52ee, #e73cdc, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradient 8s ease infinite;
+      margin:0;
       padding: 10px;
-      overflow-y: auto;
-      border-right: 1px solid #444;
-      background-color: #1a1a1a;
+      font-size: 1.2em;
+    }
+
+    #title{
+      text-align: center;
+    }
+    
+    #selection-area-container{
       display: flex;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      transform:translateX(-10px);
+      align-items: center;
+      z-index: 51;
       flex-direction: column;
-      height: 2000px;
-      scroll-behavior: smooth;
+      height: 0;
+        
     }
 
-    .high-tier, .low-tier {
-      display: flex;
+    #selection-area{
+      display:flex;
+      box-sizing:content-box;
+      border: 8px black solid;
+      border-top: none;
+      width: fit-content;
+      text-align: center;
+      min-width: 320px;
+      min-height: fit-content;
       flex-direction: column;
+      background: linear-gradient(#000000);
+      background-size: 200% 200%;
+      animation: border-flash 1s infinite steps(2);;
+      *{
+          user-select: none;
+      }
     }
 
-    .separator {
-      height: 1px;
-      background-color: #888;
-      margin: 5px 0;
-      position: relative;
-      z-index: 1;
-    }
+  #shameless-plug {
+    position: fixed;
+    bottom: 0;
+    right: 2px;
+    z-index: 50;
+    outline: 4px solid rgb(255, 123, 255);
+    margin: 0;
+    padding: 5px;
+    padding-right: 15px;
+    animation: border-flash 1s infinite steps(2);
+  }
 
-    .player {
-      background: #333;
-      margin: 2px 0;
-      padding: 3px 5px;
-      border-radius: 4px;
-      font-size: 0.85em;
-    }
+  html {
+    scroll-behavior: smooth;
+  }
+      
+  body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #111;
+    color: #fff;
+  }
 
-    .bolded { 
-      font-weight: bold; 
-    }
-    </style>
+  #main-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  #mode-bar {
+    min-height: 50px;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 5px 15px;
+    border-bottom: 2px solid #555;
+  }
+
+  #mode-bar button {
+    padding: 8px 14px;
+    background-color: #555;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  #mode-bar button:hover {
+    background-color: #777;
+  }
+
+  #content-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #text-header-bar {
+    height: 30px;
+    background-color: #222;
+    display: flex;
+    border-bottom: 1px solid #444;
+  }
+
+  .text-header {
+    flex: 1;
+    text-align: center;
+    padding: 5px 0;
+    border-right: 1px solid #444;
+  }
+
+  #text-columns {
+    flex: 1;
+    display: flex;
+  }
+
+  .text-column {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    border-right: 1px solid #444;
+    background-color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    height: 2000px;
+    scroll-behavior: smooth;
+  }
+
+  .high-tier, .low-tier {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .separator {
+    height: 1px;
+    background-color: #888;
+    margin: 5px 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .player {
+    background: #333;
+    margin: 2px 0;
+    padding: 3px 5px;
+    border-radius: 4px;
+    font-size: 0.85em;
+  }
+
+  .bolded { 
+    font-weight: bold; 
+  }
+  </style>
 </head>
 <body>
-    <div style="height: calc(3em + 20px)"></div>
-    <div id="mode-bar" style="text-align: center; font-size: 30px" class="bolded">official tiers:</div>
-    <div id="selection-area-container">
-        <div id="selection-area">
-            <h2 style="text-align: center; margin-top: 5px; margin-bottom: 5px; margin-left: 15px; margin-right: 15px;">   welcome to the sds tiers website   </h2>
-            <p id="points-used" style="margin: 5px auto;">check the <a href="https://discord.gg/vPz4S7uBrj">discord</a> for more info</p>
+  <div style="height: calc(3em + 20px)"></div>
+  <div id="mode-bar" style="text-align: center; font-size: 30px" class="bolded">official tiers:</div>
+  <div id="selection-area-container">
+      <div id="selection-area">
+          <h2 style="text-align: center; margin-top: 5px; margin-bottom: 5px; margin-left: 15px; margin-right: 15px;">   welcome to the sds tiers website   </h2>
+          <p id="points-used" style="margin: 5px auto;">check the <a href="https://discord.gg/vPz4S7uBrj">discord</a> for more info</p>
+      </div>
+  </div>
+  <div id="main-container">
+      <div id="mode-bar">
+        <button style="animation: border-flash 1s infinite steps(2);" onclick="renderMode('pvanilla')">pure vanilla</button>
+        <button style="animation: border-flash 1s infinite steps(2);" onclick="renderMode('vanilla')">balanced vanilla</button>
+        <button style="animation: border-flash 1s infinite steps(2);" onclick="renderMode('reforged')">reforged</button>
+        <button style="animation: border-flash 1s infinite steps(2);" onclick="renderMode('boomerang')">boomerang</button>
+        <button style="animation: border-flash 1s infinite steps(2);" onclick="renderMode('spleef')">spleef</button>
+        <button style="animation: border-flash 1s infinite steps(2);" onclick="renderMode('hyperspeed')">hyperspeed</button>
+        <button style="animation: border-flash 1s infinite steps(2);" onclick="renderMode('falldamage')">fall damage</button>
+      </div>
+  
+      <div id="content-section">
+        <div id="text-header-bar">
+          <div class="text-header">tier 1</div>
+          <div class="text-header">tier 2</div>
+          <div class="text-header">tier 3</div>
+          <div class="text-header">tier 4</div>
+          <div class="text-header">tier 5</div>
         </div>
-    </div>
-    <div id="main-container">
-        <div id="mode-bar">
-          <button style="animation: border-flash 1s infinite steps(2);" onclick="renderMode('pvanilla')">pure vanilla</button>
-          <button style="animation: border-flash 1s infinite steps(2);" onclick="renderMode('vanilla')">balanced vanilla</button>
-          <button style="animation: border-flash 1s infinite steps(2);" onclick="renderMode('reforged')">reforged</button>
-          <button style="animation: border-flash 1s infinite steps(2);" onclick="renderMode('boomerang')">boomerang</button>
-          <button style="animation: border-flash 1s infinite steps(2);" onclick="renderMode('spleef')">spleef</button>
-          <button style="animation: border-flash 1s infinite steps(2);" onclick="renderMode('hyperspeed')">hyperspeed</button>
-          <button style="animation: border-flash 1s infinite steps(2);" onclick="renderMode('falldamage')">fall damage</button>
-        </div>
-    
-        <div id="content-section">
-          <div id="text-header-bar">
-            <div class="text-header">tier 1</div>
-            <div class="text-header">tier 2</div>
-            <div class="text-header">tier 3</div>
-            <div class="text-header">tier 4</div>
-            <div class="text-header">tier 5</div>
-          </div>
-    
-          <div id="text-columns">
-            <div class="text-column"><div class="high-tier"></div><div class="separator"></div><div class="low-tier"></div></div>
-            <div class="text-column"><div class="high-tier"></div><div class="separator"></div><div class="low-tier"></div></div>
-            <div class="text-column"><div class="high-tier"></div><div class="separator"></div><div class="low-tier"></div></div>
-            <div class="text-column"><div class="high-tier"></div><div class="separator"></div><div class="low-tier"></div></div>
-            <div class="text-column"><div class="high-tier"></div><div class="separator"></div><div class="low-tier"></div></div>
-          </div>
+  
+        <div id="text-columns">
+          <div class="text-column"><div class="high-tier"></div><div class="separator"></div><div class="low-tier"></div></div>
+          <div class="text-column"><div class="high-tier"></div><div class="separator"></div><div class="low-tier"></div></div>
+          <div class="text-column"><div class="high-tier"></div><div class="separator"></div><div class="low-tier"></div></div>
+          <div class="text-column"><div class="high-tier"></div><div class="separator"></div><div class="low-tier"></div></div>
+          <div class="text-column"><div class="high-tier"></div><div class="separator"></div><div class="low-tier"></div></div>
         </div>
       </div>
-    
+    </div>
+  
+    <script>
+      let players = [];
+  
+      fetch('player_db.json')
+        .then(response => response.json())
+        .then(data => {
+          players = data;
+        })
+        .catch(error => console.error('Error loading player_db.json:', error));
+  
+      function renderMode(mode) {
+        const columns = document.querySelectorAll('.text-column');
+        columns.forEach(col => {
+          col.querySelector('.high-tier').innerHTML = '';
+          col.querySelector('.low-tier').innerHTML = '';
+        });
 
-      <script>
-        let players = [];
-    
-        fetch('player_db.json')
-          .then(response => response.json())
-          .then(data => {
-            players = data;
-          })
-          .catch(error => console.error('Error loading player_db.json:', error));
-    
-        function renderMode(mode) {
-          const columns = document.querySelectorAll('.text-column');
-          columns.forEach(col => {
-            col.querySelector('.high-tier').innerHTML = '';
-            col.querySelector('.low-tier').innerHTML = '';
-          });
+        const separators = document.querySelectorAll('.separator');
+        separators.forEach((sep, index) => sep.style.marginTop = '5px');
 
-          const separators = document.querySelectorAll('.separator');
-          separators.forEach((sep, index) => sep.style.marginTop = '5px');
-
-          players.forEach(player => {
-            const tier = player.tiers[mode];
-            if (!tier) return;
-    
-            const side = tier.slice(0, 2);
-            const index = parseInt(tier.slice(2)) - 1;
-            if (index < 0 || index >= 5) return;
-    
-            const div = document.createElement('div');
-            div.className = 'player';
-            div.textContent = player.user;
-    
-            const target = side === 'ht'
-              ? columns[index].querySelector('.high-tier')
-              : columns[index].querySelector('.low-tier');
-    
-            target.appendChild(div);
-          });
-          
-          columns.forEach(col => {
-            const high = col.querySelector('.high-tier');
-            const sep = col.querySelector('.separator');
-            const highChildren = high.querySelectorAll('.player');
-            if (highChildren.length > 0) {
-              high.insertBefore(sep, highChildren[highChildren.length - 1].nextSibling);
-            } else {
-              high.appendChild(sep);
-            }
-          });
-        }
-      </script>
-    <p id="shameless-plug">website coded by riot, source/template by beebp :p</p>
+        players.forEach(player => {
+          const tier = player.tiers[mode];
+          if (!tier) return;
+  
+          const side = tier.slice(0, 2);
+          const index = parseInt(tier.slice(2)) - 1;
+          if (index < 0 || index >= 5) return;
+  
+          const div = document.createElement('div');
+          div.className = 'player';
+          div.textContent = player.user;
+  
+          const target = side === 'ht'
+            ? columns[index].querySelector('.high-tier')
+            : columns[index].querySelector('.low-tier');
+  
+          target.appendChild(div);
+        });
+        
+        columns.forEach(col => {
+          const high = col.querySelector('.high-tier');
+          const low = col.querySelector('.low-tier');
+          const sep = col.querySelector('.separator');
+          const highChildren = high.querySelectorAll('.player');
+          const highPlayers = high.querySelectorAll('.player');
+          high.removeChild(sep);
+          if (highPlayers.length > 0) {
+            high.insertBefore(sep, highPlayers[highPlayers.length - 1].nextSibling);
+          } else {
+            high.appendChild(sep);
+          }
+        });
+      }
+    </script>
+  <p id="shameless-plug">website coded by riot, source/template by beebp :p</p>
 </body>
 <!-- inspect deez nuts -->
 <!-- 😜😜😜 -->

@@ -2,7 +2,7 @@
     {
       "user": "placeholder",
       "tiers": {
-        "classic": "lt5",
+        "skybattle": "lt5",
         "reforged": "lt5",
         "spleef": "lt5",
         "hyperspeed": "lt5",

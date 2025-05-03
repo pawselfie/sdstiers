@@ -52,6 +52,15 @@
       "tiers": {
         "boomerang": "lt3"
       }
+    },
+    {
+      "user": "drivingempiredude10",
+      "tiers": {
+        "pvanilla": "ht5",
+        "vanilla": "lt5",
+        "skybattle": "lt5",
+        "boomerang": "lt5"
+      }
     }
   ]
   

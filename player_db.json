@@ -1,32 +1,34 @@
 [
     {
-        "user": "placeholder",
-        "tiers": {
-          "reforged": "lt5",
-          "spleef": "lt5",
-          "hyperspeed": "lt5",
-          "falldamage": "lt5"
-        }
+      "user": "placeholder",
+      "tiers": {
+        "reforged": "lt5",
+        "spleef": "lt5",
+        "hyperspeed": "lt5",
+        "falldamage": "lt5"
+      }
     },
     {
-        "user": "riot003",
-        "tiers": {
-          "pvanilla": "ht1",
-          "vanilla": "ht1",
-          "boomerang": "ht1"
-        }
+      "user": "riot003",
+      "tiers": {
+        "pvanilla": "ht1",
+        "vanilla": "ht1",
+        "boomerang": "ht1"
+      }
     },
     {
-        "user": "tabs8200",
-        "tiers": {
-          "pvanilla": "ht1",
-          "vanilla": "ht1",
-          "boomerang": "ht1"
-        }
+      "user": "tabs8200",
+      "tiers": {
+        "pvanilla": "ht1",
+        "vanilla": "ht1",
+        "boomerang": "ht1"
+      }
     },
     {
       "user": "youreblessedbro",
       "tiers": {
+        "pvanilla": "lt4",
+        "vanilla": "lt5",
         "boomerang": "ht5"
       }
     },

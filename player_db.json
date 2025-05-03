@@ -2,7 +2,6 @@
     {
       "user": "placeholder",
       "tiers": {
-        "skybattle": "lt5",
         "reforged": "lt5",
         "spleef": "lt5",
         "hyperspeed": "lt5",
@@ -12,6 +11,7 @@
     {
       "user": "riot003",
       "tiers": {
+        "skybattle": "ht1",
         "pvanilla": "ht1",
         "vanilla": "ht1",
         "boomerang": "ht1"
@@ -56,7 +56,7 @@
     {
       "user": "drivingempiredude10",
       "tiers": {
-        "pvanilla": "ht5",
+        "pvanilla": "lt5",
         "vanilla": "lt5",
         "skybattle": "lt5",
         "boomerang": "lt5"

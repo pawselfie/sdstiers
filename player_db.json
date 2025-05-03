@@ -14,8 +14,8 @@
     {
         "user": "riot003",
         "tiers": {
-          "pvanilla": "lt1",
-          "vanilla": "lt1",
+          "pvanilla": "ht1",
+          "vanilla": "ht1",
           "boomerang": "ht1"
         }
     },
@@ -28,10 +28,16 @@
         }
     },
     {
-      "user": "firee3105",
+      "user": "youreblessedbro",
       "tiers": {
-        "vanilla": "lt3"
+        "boomerang": "ht5"
       }
-  }
+    },
+    {
+      "user": "magicalgodzilllla",
+      "tiers": {
+        "boomerang": "lt2"
+      }
+    }
   ]
   

@@ -42,6 +42,15 @@
       }
     },
     {
+      "user": "findme2441",
+      "tiers": {
+        "pvanilla": "ht3",
+        "vanilla": "lt4",
+        "skybattle": "lt3",
+        "boomerang": "ht5"
+      }
+    },
+    {
       "user": "aaxleaxel",
       "tiers": {
         "pvanilla": "ht2",

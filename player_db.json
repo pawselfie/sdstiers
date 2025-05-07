@@ -71,6 +71,15 @@
       }
     },
     {
+      "user": "newboy09809",
+      "tiers": {
+        "pvanilla": "lt5",
+        "vanilla": "lt4",
+        "skybattle": "lt5",
+        "boomerang": "lt5"
+      }
+    },
+    {
       "user": "drivingempiredude10",
       "tiers": {
         "pvanilla": "lt5",

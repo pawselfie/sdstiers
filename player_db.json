@@ -52,9 +52,9 @@
     {
       "user": "findme2441",
       "tiers": {
-        "pvanilla": "lt3",
-        "vanilla": "lt4",
-        "skybattle": "lt3",
+        "pvanilla": "lt4",
+        "vanilla": "ht4",
+        "skybattle": "lt4",
         "boomerang": "ht5"
       }
     },

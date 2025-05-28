@@ -69,6 +69,8 @@
     {
       "user": "firee3105",
       "tiers": {
+        "pvanilla": "lt3",
+        "boomerang": "lt3",
         "vanilla": "lt3"
       }
     },

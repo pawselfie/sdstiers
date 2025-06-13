@@ -75,6 +75,12 @@
       }
     },
     {
+      "user": "YourGenericNoobzter",
+      "tiers": {
+        "vanilla": "lt5"
+      }
+    },
+    {
       "user": "newboy09809",
       "tiers": {
         "pvanilla": "lt5",
@@ -95,7 +101,7 @@
         "pvanilla": "lt5",
         "vanilla": "lt5",
         "skybattle": "lt5",
-        "boomerang": "lt5"
+        "boomerang": "ht5"
       }
     },
     {

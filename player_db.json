@@ -42,6 +42,14 @@
       }
     },
     {
+      "user": "Ur_About2HaveNoTime",
+      "tiers": {
+        "pvanilla": "lt3",
+        "vanilla": "lt4",
+        "boomerang": "lt4"
+      }
+    },
+    {
       "user": "YingkiBingkiBonki",
       "tiers": {
         "pvanilla": "lt3",

@@ -91,14 +91,6 @@
       }
     },
     {
-      "user": "eeemmmrrr9",
-      "tiers": {
-        "pvanilla": "lt4",
-        "boomerang": "ht4",
-        "vanilla": "lt4"
-      }
-    },
-    {
       "user": "jorihehu",
       "tiers": {
         "pvanilla": "lt2",
@@ -168,6 +160,14 @@
         "pvanilla": "lt4",
         "boomerang": "ht5",
         "vanilla": "lt4"
+      }
+    },
+    {
+      "user": "OUT_AC3d",
+      "tiers": {
+        "pvanilla": "ht3",
+        "boomerang": "ht3",
+        "vanilla": "ht3"
       }
     },
     {

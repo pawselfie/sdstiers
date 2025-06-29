@@ -83,8 +83,202 @@
       }
     },
     {
+      "user": "magicalgodzilla",
+      "tiers": {
+        "pvanilla": "lt3",
+        "boomerang": "lt2",
+        "vanilla": "lt3"
+      }
+    },
+    {
+      "user": "eeemmmrrr9",
+      "tiers": {
+        "pvanilla": "lt4",
+        "boomerang": "ht4",
+        "vanilla": "lt4"
+      }
+    },
+    {
+      "user": "jorihehu",
+      "tiers": {
+        "pvanilla": "lt2",
+        "boomerang": "ht2",
+        "vanilla": "ht3"
+      }
+    },
+    {
+      "user": "okGoldYoT",
+      "tiers": {
+        "pvanilla": "lt2",
+        "boomerang": "lt3",
+        "vanilla": "ht3"
+      }
+    },
+    {
+      "user": "bullrider709",
+      "tiers": {
+        "pvanilla": "lt4",
+        "boomerang": "lt4",
+        "vanilla": "lt4"
+      }
+    },
+    {
+      "user": "foxyandfreddy8334",
+      "tiers": {
+        "pvanilla": "ht3",
+        "boomerang": "lt3",
+        "vanilla": "lt2"
+      }
+    },
+    {
+      "user": "poyo_EstaSus",
+      "tiers": {
+        "pvanilla": "lt5",
+        "boomerang": "lt5",
+        "vanilla": "lt5"
+      }
+    },
+    {
+      "user": "piotreklugo",
+      "tiers": {
+        "pvanilla": "lt2",
+        "boomerang": "ht3",
+        "vanilla": "lt2"
+      }
+    },
+    {
+      "user": "mariogross",
+      "tiers": {
+        "pvanilla": "ht2",
+        "boomerang": "ht4",
+        "vanilla": "lt3"
+      }
+    },
+    {
+      "user": "PhoenixfirePi",
+      "tiers": {
+        "pvanilla": "lt4",
+        "boomerang": "lt4",
+        "vanilla": "lt4"
+      }
+    },
+    {
+      "user": "Ceruleanor",
+      "tiers": {
+        "pvanilla": "lt4",
+        "boomerang": "ht5",
+        "vanilla": "lt4"
+      }
+    },
+    {
+      "user": "777519Doge1",
+      "tiers": {
+        "pvanilla": "ht4",
+        "boomerang": "ht4",
+        "vanilla": "ht4"
+      }
+    },
+    {
+      "user": "s_wyerrrr",
+      "tiers": {
+        "pvanilla": "ht5",
+        "boomerang": "ht5",
+        "vanilla": "ht5"
+      }
+    },
+    {
+      "user": "dj_tek2",
+      "tiers": {
+        "pvanilla": "ht2",
+        "boomerang": "ht5",
+        "vanilla": "lt3"
+      }
+    },
+    {
+      "user": "GamerGirlTheGreat",
+      "tiers": {
+        "pvanilla": "lt2",
+        "boomerang": "lt1",
+        "vanilla": "lt2"
+      }
+    },
+    {
+      "user": "plptlthesecond",
+      "tiers": {
+        "pvanilla": "lt5",
+        "boomerang": "lt5",
+        "vanilla": "lt5"
+      }
+    },
+    {
+      "user": "Tom465890",
+      "tiers": {
+        "pvanilla": "lt5",
+        "boomerang": "lt5",
+        "vanilla": "lt5"
+      }
+    },
+    {
+      "user": "plptlthesecond",
+      "tiers": {
+        "pvanilla": "lt5",
+        "boomerang": "lt5",
+        "vanilla": "lt5"
+      }
+    },
+    {
+      "user": "WraithOfTheLost",
+      "tiers": {
+        "pvanilla": "ht4",
+        "boomerang": "lt5",
+        "vanilla": "ht4"
+      }
+    },
+    {
+      "user": "Willporsche3",
+      "tiers": {
+        "pvanilla": "lt5",
+        "boomerang": "lt5",
+        "vanilla": "lt5"
+      }
+    },
+    {
+      "user": "lq_sog",
+      "tiers": {
+        "pvanilla": "lt5",
+        "boomerang": "lt5",
+        "vanilla": "lt5"
+      }
+    },
+    {
+      "user": "Brunofinolis",
+      "tiers": {
+        "pvanilla": "lt4",
+        "boomerang": "lt5",
+        "vanilla": "lt4"
+      }
+    },
+    {
+      "user": "Rajsaab1243",
+      "tiers": {
+        "pvanilla": "lt2",
+        "boomerang": "lt1",
+        "vanilla": "lt2"
+      }
+    },
+    {
+      "user": "ChrSiete",
+      "tiers": {
+        "pvanilla": "lt4",
+        "boomerang": "lt5",
+        "vanilla": "lt4"
+      }
+    },
+    {
       "user": "YourGenericNoobzter",
       "tiers": {
+        "pvanilla": "lt5",
+        "boomerang": "lt5",
         "vanilla": "lt5"
       }
     },
@@ -94,13 +288,15 @@
         "pvanilla": "lt5",
         "vanilla": "lt4",
         "skybattle": "lt5",
-        "boomerang": "lt5"
+        "boomerang": "ht5"
       }
     },
     {
       "user": "envisiond",
       "tiers": {
-        "boomerang": "lt4"
+        "boomerang": "lt4",
+        "vanilla": "lt4",
+        "pvanilla": "lt4"
       }
     },
     {
@@ -116,7 +312,8 @@
       "user": "spekunble",
       "tiers": {
         "pvanilla": "lt1",
-        "vanilla": "ht2"
+        "vanilla": "ht2",
+        "boomerang": "ht2"
       }
     },
     {

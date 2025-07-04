@@ -83,6 +83,22 @@
       }
     },
     {
+      "user": "ha_mmy0",
+      "tiers": {
+        "pvanilla": "lt2",
+        "boomerang": "ht2",
+        "vanilla": "ht2"
+      }
+    },
+    {
+      "user": "Aim_bot404",
+      "tiers": {
+        "pvanilla": "lt1",
+        "boomerang": "lt3",
+        "vanilla": "ht3"
+      }
+    },
+    {
       "user": "magicalgodzilla",
       "tiers": {
         "pvanilla": "lt3",
@@ -200,14 +216,6 @@
         "pvanilla": "lt2",
         "boomerang": "lt1",
         "vanilla": "lt2"
-      }
-    },
-    {
-      "user": "plptlthesecond",
-      "tiers": {
-        "pvanilla": "lt5",
-        "boomerang": "lt5",
-        "vanilla": "lt5"
       }
     },
     {

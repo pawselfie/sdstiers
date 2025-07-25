@@ -109,9 +109,9 @@
     {
       "user": "jorihehu",
       "tiers": {
-        "pvanilla": "lt2",
-        "boomerang": "ht2",
-        "vanilla": "ht3"
+        "pvanilla": "ht2",
+        "boomerang": "lt1",
+        "vanilla": "lt1"
       }
     },
     {

@@ -244,8 +244,10 @@
       function renderMode(mode) {
         const columns = document.querySelectorAll('.text-column');
         columns.forEach(col => {
-          col.querySelector('.high-tier').innerHTML = '';
-          col.querySelector('.low-tier').innerHTML = '';
+          const high = col.querySelector('.high-tier');
+          if (high) high.innerHTML = '';
+          const low = col.querySelector('.low-tier');
+          if (low) low.innerHTML = '';
         });
 
         const separators = document.querySelectorAll('.separator');

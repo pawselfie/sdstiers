@@ -194,10 +194,6 @@
   .bolded { 
     font-weight: bold; 
   }
-
-  .text-column:nth-child(6) .separator {
-    display: none;
-  }
   </style>
 </head>
 <body>
@@ -222,7 +218,7 @@
         <div class="text-header">tier 3</div>
         <div class="text-header">tier 4</div>
         <div class="text-header">tier 5</div>
-        <div class="text-header">inept</div> <!-- NEW HEADER -->
+        <div class="text-header">inept</div>
       </div>
 
       <div id="text-columns">
@@ -231,7 +227,7 @@
         <div class="text-column"><div class="high-tier"></div><div class="separator"></div><div class="low-tier"></div></div>
         <div class="text-column"><div class="high-tier"></div><div class="separator"></div><div class="low-tier"></div></div>
         <div class="text-column"><div class="high-tier"></div><div class="separator"></div><div class="low-tier"></div></div>
-        <div class="text-column"><div class="high-tier"></div><div class="separator"></div><div class="low-tier"></div></div> <!-- NEW COLUMN -->
+        <div class="text-column"><div class="low-tier"></div></div>
       </div>
     </div>
   
@@ -259,9 +255,8 @@
           const tier = player.tiers[mode];
           if (!tier) return;
 
-          // Special case for "inept"
           if (tier.toLowerCase().includes('inept')) {
-            const ineptCol = columns[5].querySelector('.low-tier'); // place in 6th col
+            const ineptCol = columns[5].querySelector('.low-tier');
             const div = document.createElement('div');
             div.className = 'player';
             div.textContent = player.user;

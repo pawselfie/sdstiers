@@ -213,6 +213,7 @@
       </div>
   
       <div id="text-header-bar">
+        <div class="text-header">elite</div>
         <div class="text-header">tier 1</div>
         <div class="text-header">tier 2</div>
         <div class="text-header">tier 3</div>
@@ -222,6 +223,7 @@
       </div>
 
       <div id="text-columns">
+        <div class="text-column"><div class="low-tier"></div></div>
         <div class="text-column"><div class="high-tier"></div><div class="separator"></div><div class="low-tier"></div></div>
         <div class="text-column"><div class="high-tier"></div><div class="separator"></div><div class="low-tier"></div></div>
         <div class="text-column"><div class="high-tier"></div><div class="separator"></div><div class="low-tier"></div></div>
@@ -242,45 +244,58 @@
         .catch(error => console.error('Error loading player_db.json:', error));
   
       function renderMode(mode) {
-        const columns = document.querySelectorAll('.text-column');
-        columns.forEach(col => {
-          const high = col.querySelector('.high-tier');
-          if (high) high.innerHTML = '';
-          const low = col.querySelector('.low-tier');
-          if (low) low.innerHTML = '';
-        });
+      const columns = document.querySelectorAll('.text-column');
+      columns.forEach(col => {
+        const high = col.querySelector('.high-tier');
+        if (high) high.innerHTML = '';
+        const low = col.querySelector('.low-tier');
+        if (low) low.innerHTML = '';
+      });
 
-        const separators = document.querySelectorAll('.separator');
-        separators.forEach((sep) => sep.style.marginTop = '5px');
+      const separators = document.querySelectorAll('.separator');
+      separators.forEach((sep) => sep.style.marginTop = '5px');
 
-        players.forEach(player => {
-          const tier = player.tiers[mode];
-          if (!tier) return;
+      players.forEach(player => {
+        const tier = player.tiers[mode];
+        if (!tier) return;
 
-          if (tier.toLowerCase().includes('inept')) {
-            const ineptCol = columns[5].querySelector('.low-tier');
-            const div = document.createElement('div');
-            div.className = 'player';
-            div.textContent = player.user;
-            ineptCol.appendChild(div);
-            return;
-          }
-
-          const side = tier.slice(0, 2);
-          const index = parseInt(tier.slice(2)) - 1;
-          if (index < 0 || index >= 5) return;
-
+        // Elite handling
+        if (tier.toLowerCase().includes('elite')) {
+          const eliteCol = columns[0].querySelector('.low-tier');
           const div = document.createElement('div');
           div.className = 'player';
           div.textContent = player.user;
+          eliteCol.appendChild(div);
+          return;
+        }
 
-          const target = side === 'ht'
-            ? columns[index].querySelector('.high-tier')
-            : columns[index].querySelector('.low-tier');
+        // Inept handling
+        if (tier.toLowerCase().includes('inept')) {
+          const ineptCol = columns[6].querySelector('.low-tier');
+          const div = document.createElement('div');
+          div.className = 'player';
+          div.textContent = player.user;
+          ineptCol.appendChild(div);
+          return;
+        }
 
-          target.appendChild(div);
-        });
-      }
+        // Regular tiers (1–5)
+        const side = tier.slice(0, 2);
+        const index = parseInt(tier.slice(2)) - 1;
+        if (index < 0 || index >= 5) return;
+
+        const div = document.createElement('div');
+        div.className = 'player';
+        div.textContent = player.user;
+
+        const target = side === 'ht'
+          ? columns[index + 1].querySelector('.high-tier') // +1 shift for Elite
+          : columns[index + 1].querySelector('.low-tier');
+
+        target.appendChild(div);
+      });
+    }
+
     </script>
   <p id="shameless-plug">website coded by riot, source/template by beebp :p</p>
 </body>

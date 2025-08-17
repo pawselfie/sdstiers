@@ -27,10 +27,10 @@
     {
       "user": "tabs8200",
       "tiers": {
-        "pvanilla": "ht1",
-        "vanilla": "ht1",
-        "boomerang": "ht1",
-        "skybattle": "ht1"
+        "pvanilla": "elite",
+        "vanilla": "elite",
+        "boomerang": "elite",
+        "skybattle": "elite"
       }
     },
     {
@@ -70,7 +70,7 @@
       "user": "aaxleaxel",
       "tiers": {
         "pvanilla": "ht2",
-        "vanilla": "lt1",
+        "vanilla": "ht1",
         "boomerang": "ht2"
       }
     },
@@ -107,11 +107,17 @@
       }
     },
     {
+      "user": "j8c_b",
+      "tiers": {
+        "vanilla": "ht3"
+      }
+    },
+    {
       "user": "jorihehu",
       "tiers": {
-        "pvanilla": "ht2",
-        "boomerang": "lt1",
-        "vanilla": "lt1"
+        "pvanilla": "lt1",
+        "boomerang": "ht1",
+        "vanilla": "ht1"
       }
     },
     {
@@ -141,9 +147,9 @@
     {
       "user": "poyo_EstaSus",
       "tiers": {
-        "pvanilla": "lt5",
-        "boomerang": "lt5",
-        "vanilla": "lt5"
+        "pvanilla": "inept",
+        "boomerang": "inept",
+        "vanilla": "inept"
       }
     },
     {
@@ -214,7 +220,7 @@
       "user": "GamerGirlTheGreat",
       "tiers": {
         "pvanilla": "lt2",
-        "boomerang": "lt1",
+        "boomerang": "ht1",
         "vanilla": "lt2"
       }
     },
@@ -320,8 +326,8 @@
       "user": "spekunble",
       "tiers": {
         "pvanilla": "lt1",
-        "vanilla": "ht2",
-        "boomerang": "ht2"
+        "vanilla": "lt1",
+        "boomerang": "lt1"
       }
     },
     {

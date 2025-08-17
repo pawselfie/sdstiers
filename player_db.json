@@ -141,7 +141,7 @@
       "tiers": {
         "pvanilla": "ht3",
         "boomerang": "lt3",
-        "vanilla": "lt2"
+        "vanilla": "ht2"
       }
     },
     {
@@ -325,7 +325,7 @@
     {
       "user": "spekunble",
       "tiers": {
-        "pvanilla": "lt1",
+        "pvanilla": "ht1",
         "vanilla": "lt1",
         "boomerang": "lt1"
       }
